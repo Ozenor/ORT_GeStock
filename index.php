@@ -1,2 +1,3 @@
 <?php
-    echo "Salut";
+    header('Location: /views/index.php');
+    exit();
