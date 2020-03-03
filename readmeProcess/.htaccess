@@ -1,0 +1,4 @@
+AuthName "Restricted area"
+AuthType Basic
+AuthUserFile "E:/OrtFormation/projetOrt/ORT_GeStock/readmeProcess/.htpasswd"
+Require valid-user
