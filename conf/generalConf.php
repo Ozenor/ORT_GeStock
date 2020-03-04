@@ -8,6 +8,9 @@
     echo $_SERVER['REMOTE_ADDR']."<br>";
     //die("Die ici ==> ".$_SERVER['PHP_SELF']); /* */ 
 
+    // Mode Test 0-1
+    define('MODE_TEST', 1);
+
 // #############################################################################
 // LOCAL CONFIGURATION #########################################################
 // #############################################################################
@@ -22,22 +25,20 @@ if ($_SERVER['SERVER_NAME']=="gestock" OR $_SERVER['REMOTE_ADDR']=="::1") {
         define('PASSWORD_DATABASE', '');
         define('CHARSET_BDD', 'UTF8');
     // Nom Bdd Applications
-        define('DATABASE_NAME_TOTO', 'toto'); // Bdd locale
+        define('DATABASE_NAME_GESTION_STOCK_DEV', 'gestion_stock'); // Bdd locale
         // define('DATABASE_NAME_TOTO02', 'toto2'); // Bdd copie de prod
     // Definition du path en local de la racine du projet
-        define('PATH_MACHINE', 'D:/workspace/toto/');
+        define('PATH_MACHINE', 'E:/OrtFormation/projetOrt/ORT_GeStock/');
     // Definition du path du host principal
-        define('HTTP_PATH_HOST_PRINCIPAL', 'http://toto/');
-    // Definition du path du dossier readme process
-        define('HTTP_PATH_SERVICES', 'toto/');
+        define('HTTP_PATH_HOST_PRINCIPAL', 'http://gestock/');
     // Definition du path des views
         define('HTTP_PATH_VIEWS', 'views/');
     // Var de sécurité pour l'authentification
-        define('VAR_SECURE_AUTH', 'yoyo');
+        define('VAR_SECURE_AUTH', 'thee1*5r*oçèt_$l*l!59*5kjkgl(-hn');
     // Langue par defaut
         define('LANGUE_PAR_DEFAUT', 'fra');
     // Nom des cookies
-        define('COOKIE_RESTER_CONNECTE', "yaya");
+        define('COOKIE_RESTER_CONNECTE', "tfiè-_è_*5");
         define('COOKIE_HTTPS_ONLY', FALSE);
     
     // #############################################################################
@@ -51,9 +52,9 @@ if ($_SERVER['SERVER_NAME']=="gestock" OR $_SERVER['REMOTE_ADDR']=="::1") {
     
     // ################ CONF PROD ###########################
     // Conf email support technique
-        define('EMAIL_SUPPORT_TECH', 'tt@ff.gg');
+        define('EMAIL_SUPPORT_TECH', 'tech@gestock.com');
     // Conf nom de domaine - Sert pour les communications
-        define('WWW_NDD_GENERAL', 'www.toto.com');
+        define('WWW_NDD_GENERAL', 'www.gestock.com');
     // Conf Database
         define('HOST_DATABASE', '127.0.0.1');
         define('USERNAME_DATABASE', 'root');
