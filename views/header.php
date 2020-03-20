@@ -29,7 +29,7 @@
                 <img src="<?php echo HTTP_PATH_HOST_PRINCIPAL ?>component/img/logo.png" alt="logo" width="30px" height="30px" class="mr-1">
                 <strong>GeStock</strong>
             </a>
-            <span><?php echo Controllers::writingHello($arrayVar['maVar']); ?></span>
+            <span><?php echo Controllers::writingHello("TOTO"); ?></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

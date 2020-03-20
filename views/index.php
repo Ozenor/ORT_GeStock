@@ -16,7 +16,11 @@ if (MODE_TEST == 1) {
 
 // Sécurisation des vars reçus
 $arrayVar = Controllers::secureArray($_REQUEST);
-// var_dump($arrayVar);
+
+// Test API
+$param = "?ctrl=getUsers";
+$resultGetCurl = Controllers::getCurlRest($param);
+//var_dump($resultGetCurl);
 
 // Appel Header
 require_once("header.php");
