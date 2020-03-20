@@ -23,8 +23,8 @@ $resultGetCurl = Controllers::getCurlRest($param);
 //var_dump($resultGetCurl);
 
 // Appel Header
-require_once("header.php");
+require_once("includes/header.php");
 // Appel Body
-require_once("main.php");
+require_once("includes/main.php");
 // Appel Footer
-require_once("footer.php");
+require_once("includes/footer.php");

@@ -20,7 +20,11 @@
             <small class="d-block mb-3 text-muted">Moi &copy; 2020</small>
         </div>
     </footer>
-
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
     </body>
 
     </html>

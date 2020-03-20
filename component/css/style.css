@@ -1,0 +1,15 @@
+aside {
+  background-color: hsl(187, 58%, 33%);
+}
+
+.bg-col-gray,
+#v-pills-tab .active {
+  background-color: hsl(0, 0%, 78%);
+}
+#v-pills-tab a {
+  color: white;
+}
+
+#v-pills-tab a.active {
+  color: hsl(0, 83%, 43%);
+}
