@@ -55,6 +55,11 @@ class Controllers
         return $returnText;
     }
 
+    static function verifConnexionUser()
+    {
+        return (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) ? true : false;
+    }
+
     /**
      * Call curl on API in REST
      * @param int $param => params for call api
