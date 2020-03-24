@@ -19,8 +19,17 @@ $arrayVar = Controllers::secureArray($_REQUEST);
 
 // Test API
 $param = "?ctrl=getUsers";
+//$param = "?ctrl=processApi";
 $resultGetCurl = Controllers::getCurlRest($param);
-//var_dump($resultGetCurl);
+$resultGetCurl = json_decode($resultGetCurl);
+if ($resultGetCurl->status == "failed") {
+    die("Une erreur est survenue");
+} elseif ($resultGetCurl->status == "success") {
+    var_dump($resultGetCurl->result);
+} else {
+    die("Erreur critique");
+}
+
 
 // Appel Header
 require_once("includes/header.php");

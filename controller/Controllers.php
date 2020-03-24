@@ -26,16 +26,21 @@ class Controllers
         foreach ($array as $key => $value) {
             // Si la valeur n'est pas un tableau
             if (!is_array($value)) {
-                $value = Trim($value); // Enleve les espaces du début et de fin
-                $value = htmlspecialchars($value); // Traduit les entités HTML dans une chaine de caractères
-                $value = strip_tags($value); // Supprime les balises HTML et PHP d'une chaine de caractère
-                $newArray[$key] = $value; // Remplace dans le tableau l'ancienne valeur par la nouvelle
                 // Sinon on remet les valeurs telles quelles
+                $newArray[$key] = Controllers::secure($value); // Remplace dans le tableau l'ancienne valeur par la nouvelle
             } else {
                 $newArray[$key] = Controllers::secureArray($value);
             }
         }
         return $newArray;
+    }
+
+    public static function secure($value)
+    {
+        $value = Trim($value); // Enleve les espaces du début et de fin
+        $value = htmlspecialchars($value); // Traduit les entités HTML dans une chaine de caractères
+        $value = strip_tags($value); // Supprime les balises HTML et PHP d'une chaine de caractère
+        return $value;
     }
 
     /**
