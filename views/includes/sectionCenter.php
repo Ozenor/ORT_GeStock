@@ -4,7 +4,7 @@
             <thead>
                 <tr>
                     <?php
-                    foreach ($resultGetCurl->result[0] as $key => $val) {
+                    foreach ($resultGetProducts->result[0] as $key => $val) {
                     ?>
                         <th><?php echo ucfirst($key) ?></th>
                     <?php
@@ -16,7 +16,7 @@
             </thead>
             <tbody>
                 <?php
-                foreach ($resultGetCurl->result as $value) {
+                foreach ($resultGetProducts->result as $value) {
                 ?>
                     <tr>
                         <?php

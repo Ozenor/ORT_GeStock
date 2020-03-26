@@ -28,16 +28,12 @@ if (
     && isset($arrayVar['inputEmail']) && !empty($arrayVar['inputEmail'])
     && isset($arrayVar['inputPassword']) && !empty($arrayVar['inputPassword'])
 ) {
-    // Test API
-    $param = "?ctrl=getUsers";
-    //$param = "?ctrl=processApi";
-    $resultGetCurl = Controllers::getCurlRest($param);
-    $resultGetCurl = json_decode($resultGetCurl);
-    //var_dump($resultGetCurl);
-    if ($resultGetCurl->status == "failed") {
+    $resultGetUsers = Controllers::getUsers();
+    //var_dump($resultGetUsers);
+    if ($resultGetUsers->status == "failed") {
         die("Une erreur est survenue");
-    } elseif ($resultGetCurl->status == "success") {
-        foreach ($resultGetCurl->result as $value) {
+    } elseif ($resultGetUsers->status == "success") {
+        foreach ($resultGetUsers->result as $value) {
             //var_dump($value->email);
             if ($value->email == $arrayVar['inputEmail'] && $value->mot_de_passe == $arrayVar['inputPassword']) {
                 foreach ($value as $key => $val) {
@@ -46,6 +42,7 @@ if (
                     // var_dump($_SESSION[$key . 'User']);
                 }
                 $connected = true;
+                $resultGetProducts = Controllers::getProducts();
                 break;
             }
         }
@@ -56,10 +53,9 @@ if (
         die("Erreur critique");
     }
 } else if ($connected) {
-    // Test API
-    $param = "?ctrl=getUsers";
-    $resultGetCurl = Controllers::getCurlRest($param);
-    $resultGetCurl = json_decode($resultGetCurl);
+
+    $resultGetUsers = Controllers::getUsers();
+    $resultGetProducts = Controllers::getProducts();
 }
 
 

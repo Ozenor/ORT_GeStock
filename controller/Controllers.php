@@ -60,6 +60,15 @@ class Controllers
         return (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])) ? true : false;
     }
 
+    static function getUsers()
+    {
+        return json_decode(Controllers::getCurlRest("?ctrl=getUsers"));
+    }
+    static function getProducts()
+    {
+        return json_decode(Controllers::getCurlRest("?ctrl=getProducts"));
+    }
+
     /**
      * Call curl on API in REST
      * @param int $param => params for call api

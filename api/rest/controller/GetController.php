@@ -51,6 +51,30 @@ class GetController extends Controllers
         }
         $this->responseResult($resultFinal);
     }
+    /**
+     * Renvoi la liste de tous les produits
+     *
+     * @param string $ctrl => name controleur
+     * @return json => text page
+     */
+    private function getProducts($ctrl)
+    {
+        // Call to model
+        $query = GetModel::getProductsModel();
+        // Execute query
+        $param = array();
+        $this->tryCatchError($query, $param, $ctrl);
+        // Result
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        // No result
+        if ($result == false) {
+            $resultFinal = array('controller' => $ctrl, 'status' => 'failed', 'result' => 'No data found');
+            // Success
+        } else {
+            $resultFinal = array('controller' => $ctrl, 'status' => 'success', 'result' => $result);
+        }
+        $this->responseResult($resultFinal);
+    }
 }
 
 // Initiiate Library
