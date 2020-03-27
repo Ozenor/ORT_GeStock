@@ -1,15 +1,21 @@
-<main class="container-fluid">
+<section id="corp" class="container-fluid" style="background: white;">
+
     <div class="row">
         <?php
-        // Appel asideMenu
-        require_once("aside.php");
 
-        // Appel sectionMain
+        require_once("sideMenu.php");
         if ($connected) {
-            require_once("sectionCenter.php");
+            require_once("listedesproduits.php");
         } else {
-            require_once("sectionConnexion.php");
+            require_once("mainConnexion.php");
         }
         ?>
+
+
+
+
+
+
     </div>
-</main>
+
+</section>

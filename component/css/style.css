@@ -1,137 +1,94 @@
-.bg-col-gray {
-  background-color: hsl(0, 0%, 93%);
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.btn-square {
-  width: 6rem;
-  height: 6rem;
+a {
+  text-decoration: none;
 }
 
-.btn-green {
-  color: #fff;
-  background: hsl(134, 61%, 41%);
-  border-color: hsl(134, 61%, 41%);
+/* ------  header --------*/
+
+.btn-outline-blanc {
+  color: white;
+  border: solid 0.5px white;
+  vertical-align: top !important ;
 }
-.btn-green:hover {
-  color: #fff;
-  background-color: hsl(134, 61%, 34%);
-  border-color: hsl(134, 61%, 31%);
+.btn-outline-blanc:hover {
+  color: #343a40;
+  background-color: white;
+}
+nav i:hover {
+  color: grey;
+}
+/* -----   fin header ------- */
+
+/*   -----   main ------ */
+#Connexion {
+  height: 450px;
 }
 
-.btn-orange {
-  color: #fff;
-  background: hsl(27, 98%, 54%);
-  border-color: hsl(27, 98%, 54%);
+#Connexion img {
+  margin: 0 auto;
 }
-.btn-orange:hover {
-  color: #fff;
-  background-color: hsl(27, 98%, 47%);
-  border-color: hsl(27, 98%, 44%);
+#Connexion p {
+  font-size: smaller;
 }
-
-.btn-purple {
-  color: #fff;
-  background: hsl(261, 51%, 51%);
-  border-color: hsl(261, 51%, 51%);
+.fb {
+  font-size: 30px !important;
 }
-.btn-purple:hover {
-  color: #fff;
-  background: hsl(261, 51%, 44%);
-  border-color: hsl(261, 51%, 41%);
+#corp a {
+  color: white;
 }
 
-.btn-pink {
-  color: #fff;
-  background: hsl(332, 79%, 58%);
-  border-color: hsl(332, 79%, 58%);
-}
-.btn-pink:hover {
-  color: #fff;
-  background: hsl(332, 79%, 51%);
-  border-color: hsl(332, 79%, 48%);
+#log a {
+  color: #343a40;
 }
 
-.btn-teal {
-  color: #fff;
-  background: hsl(162, 73%, 46%);
-  border-color: hsl(162, 73%, 46%);
-}
-.btn-teal:hover {
-  color: #fff;
-  background: hsl(162, 73%, 39%);
-  border-color: hsl(162, 73%, 36%);
-}
-
-.btn-red {
-  color: #fff;
-  background: hsl(354, 70%, 54%);
-  border-color: hsl(354, 70%, 54%);
-}
-.btn-red:hover {
-  color: #fff;
-  background: hsl(354, 70%, 47%);
-  border-color: hsl(354, 70%, 44%);
-}
-
-.btn-cyan {
-  color: #fff;
-  background: hsl(188, 78%, 41%);
-  border-color: hsl(188, 78%, 41%);
-}
-.btn-cyan:hover {
-  color: #fff;
-  background: hsl(188, 78%, 34%);
-  border-color: hsl(188, 78%, 31%);
-}
-
-#sideMenu {
-  min-height: calc(100vh - 50px - 5.625rem);
-}
-@media (max-width: 767.98px) {
-  .col-up-to-md-12 {
-    width: 100vw;
+@media screen and (max-width: 768px) {
+  .row {
+    display: inline;
   }
 }
 
-section {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.centrer {
+  text-align: center;
 }
 
-.form-signin {
+/*  ----------- footer ---------- */
+
+/*footer {
+        bottom: 0;
+        position: absolute;}*/
+
+div.fw-footer {
+  margin-bottom: 0;
   width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-}
-.form-signin .checkbox {
-  font-weight: 400;
-}
-.form-signin .form-control {
-  position: relative;
+  padding: 2em 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
-#example_wrapper {
-  width: 100%;
+.btw {
+  border-top: solid white 0.5px;
 }
+
+article {
+  margin: 0 auto;
+}
+footer p {
+  margin: 0;
+}
+#resaux i {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#resaux a {
+  color: white;
+}
+
+#resaux a:hover {
+  color: grey;
+}
+
+/* ----  fin footer ------*/

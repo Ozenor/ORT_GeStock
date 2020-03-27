@@ -1,5 +1,7 @@
-<div class="col bg-col-gray px-2 my-3">
-    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+<!-- <div class="col bg-col-gray px-2 my-3">
+    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%"> -->
+<div class="table-responsive rounded-bottom mb-5">
+    <table class="table table-striped table-sm">
         <thead>
             <tr>
                 <?php

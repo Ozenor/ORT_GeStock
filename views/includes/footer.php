@@ -1,30 +1,28 @@
-    <footer class="pt-4 border-top bg-dark">
-        <div class="row">
-            <div class="col-4 list-group list-group-flush text-center">
-                <a href="#" class="list-group-item text-white bg-dark">Accueil</a>
-                <a href="#" class="list-group-item text-white bg-dark">A voir</a>
-                <a href="#" class="list-group-item text-white bg-dark">Je sais pas</a>
-            </div>
-            <div class="col-4 list-group list-group-flush text-center">
-                <a href="#" class="list-group-item text-white bg-dark">Qui sommes-nous ?</a>
-                <a href="#" class="list-group-item text-white bg-dark">A voir</a>
-                <a href="#" class="list-group-item text-white bg-dark">Je sais pas</a>
-            </div>
-            <div class="col-4 list-group list-group-flush text-center">
-                <a href="#" class="list-group-item text-white bg-dark">Connexion</a>
-                <a href="#" class="list-group-item text-white bg-dark">A voir</a>
-                <a href="#" class="list-group-item text-white bg-dark">Je sais pas</a>
-            </div>
-        </div>
-        <div class="text-center pt-3">
-            <small class="d-block mb-3 text-muted">Moi &copy; 2020</small>
-        </div>
-    </footer>
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        });
-    </script>
-    </body>
+<div class="fw-footer bg-dark text-white" style="font-size: 10px;">
+  <div class="container">
+    <div id="resaux" class="text-center">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>&nbsp&nbsp<a href="#"><i class="fab fa-twitter"></i></a>&nbsp&nbsp<a href="#"><i class="fab fa-youtube"></i></a>&nbsp&nbsp<a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
 
-    </html>
+    <!-- <div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div> -->
+
+    <div class="col-md-9-offset-1 text-center btw">
+      <a href="#" class="bbw" style="text-decoration: none; color: white;">Nous contacter&nbsp&nbsp|</a><a href="#" class="bbw" style="text-decoration: none; color: white;">&nbsp&nbspMentions legales&nbsp&nbsp|</a><a href="#" class="bbw" style="text-decoration: none; color: white;">&nbsp&nbspConditions generales </a>
+
+
+
+    </div>
+    <div class="text-center" style="margin-top:20px;">
+      <article class="d-inline-block align-top"><br>
+        <img src="../component/img/logo2.png" width="25%" alt="logo">
+        <p> &copy; Copyrights | Moi | Pour Ort Toulouse | 2020</p>
+      </article>
+    </div>
+
+  </div>
+
+  </body>
+
+  </html>

@@ -25,8 +25,8 @@ $connected = Controllers::verifConnexionUser();
 $echecConnexion = '';
 if (
     !$connected
-    && isset($arrayVar['inputEmail']) && !empty($arrayVar['inputEmail'])
-    && isset($arrayVar['inputPassword']) && !empty($arrayVar['inputPassword'])
+    && isset($arrayVar['email']) && !empty($arrayVar['email'])
+    && isset($arrayVar['mdp']) && !empty($arrayVar['mdp'])
 ) {
     $resultGetUsers = Controllers::getUsers();
     //var_dump($resultGetUsers);
@@ -35,7 +35,7 @@ if (
     } elseif ($resultGetUsers->status == "success") {
         foreach ($resultGetUsers->result as $value) {
             //var_dump($value->email);
-            if ($value->email == $arrayVar['inputEmail'] && $value->mot_de_passe == $arrayVar['inputPassword']) {
+            if ($value->email == $arrayVar['email'] && $value->mot_de_passe == $arrayVar['mdp']) {
                 foreach ($value as $key => $val) {
                     // echo $key . 'User';
                     $_SESSION[$key . 'User'] = $val;
