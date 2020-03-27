@@ -25,8 +25,8 @@ $connected = Controllers::verifConnexionUser();
 $echecConnexion = '';
 if (
     !$connected
-    && isset($arrayVar['email']) && !empty($arrayVar['email'])
-    && isset($arrayVar['mdp']) && !empty($arrayVar['mdp'])
+    && isset($_SESSION['email']) && !empty($_SESSION['email'])
+    && isset($_SESSION['mdp']) && !empty($_SESSION['mdp'])
 ) {
     $resultGetUsers = Controllers::getUsers();
     //var_dump($resultGetUsers);
@@ -35,7 +35,7 @@ if (
     } elseif ($resultGetUsers->status == "success") {
         foreach ($resultGetUsers->result as $value) {
             //var_dump($value->email);
-            if ($value->email == $arrayVar['email'] && $value->mot_de_passe == $arrayVar['mdp']) {
+            if ($value->email == $_SESSION['email'] && $value->mot_de_passe == $_SESSION['mdp']) {
                 foreach ($value as $key => $val) {
                     // echo $key . 'User';
                     $_SESSION[$key . 'User'] = $val;
@@ -52,6 +52,8 @@ if (
     } else {
         die("Erreur critique");
     }
+    unset($_SESSION['email']);
+    unset($_SESSION['mdp']);
 } else if ($connected) {
 
     $resultGetUsers = Controllers::getUsers();
