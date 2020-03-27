@@ -37,7 +37,7 @@
 <body>
   <header>
     <nav class="navbar navbar-dark bg-dark ">
-      <a class="navbar-brand" href="#home"><i class="fas fa-home"></i>
+      <a class="navbar-brand" href="index.php"><i class="fas fa-home"></i>
         <img src="/component/img/logo.png" width="45%" class="d-inline-block align-top" alt="logo">
       </a>
       <span class="text-white"><?php echo Controllers::writingHello("Moi") ?></span>
