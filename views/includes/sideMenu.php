@@ -10,10 +10,10 @@
         <i class="fas fa-user fb bg-light rounded p-3"></i>
       <?php } ?>
       <div>
-        <a class="nav-link pb-0 pl-1" href="#"><?php echo ($connected) ? $_SESSION['typeUser'] : 'guest' ?></a>
+        <a class="nav-link pb-0" href="#"><?php echo ($connected) ? $_SESSION['typeUser'] : 'guest' ?></a>
         <div class="row">
-          <a class="nav-link pt-0 ml-1" href="#">Profil </a>
-          <a class="nav-link pt-0" href="<?php echo ($connected) ? 'deconnexion.php' : '/index.php' ?>">
+          <a class="nav-link pt-0 ml-3" href="#">Profil </a>
+          <a class="nav-link pt-0 pl-0" href="<?php echo ($connected) ? 'deconnexion.php' : '/index.php' ?>">
             <i class="fas fa-lock">&nbsp;</i><?php echo ($connected) ? 'Déconnexion' : 'Connexion' ?>
           </a>
         </div>
@@ -27,15 +27,15 @@
           <p class="text-uppercase">&nbsp; Tableau de bord</p>
         </li>
         <li class="nav-item row mb-4">
-          <a class="nav-link col-4 offset-1 bg-success rounded p-3" href="#">
+          <a class="nav-link col-4 offset-1 bg-success rounded p-3" href="index.php">
             <i class="fas fa-shopping-cart fb mb-2"></i><br>Entrée
           </a><a class="nav-link col-4 offset-1 bg-danger rounded p-3" href="#">
             <i class="fas fa-shopping-cart fb mb-2"></i><br>Sortie
           </a>
         </li>
         <li class="nav-item row mb-4">
-          <a class="nav-link col-4 offset-1 bg-primary rounded p-3" href="#">
-            <i class="fas fa-user fb mb-2"></i><br>Utilisateurs
+          <a class="nav-link col-4 offset-1 bg-primary rounded p-3" href="index.php?page=addUser">
+            <i class="fas fa-user-plus fb mb-2"></i><br>Utilisateur
           </a> <a class="nav-link col-4 offset-1 bg-warning rounded p-3" href="#">
             <i class="fas fa-poll fb mb-2"></i><br>Statistique
           </a>
@@ -48,7 +48,7 @@
           </a>
         </li>
         <li class="nav-item row mb-4">
-          <a class="nav-link col-4 offset-1 bg-warning rounded p-3" href="#">
+          <a class="nav-link col-4 offset-1 bg-warning rounded p-3" href="index.php?page=listUsers">
             <i class="fas fa-user fb mb-2"></i><br>Client
           </a><a class="nav-link col-4 offset-1 bg-info rounded p-3" href="#">
             <i class="fas fa-network-wired fb mb-2"></i><br>Categorie

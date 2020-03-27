@@ -106,4 +106,24 @@ class Controllers
         $data = Trim($data); // Enleve les espaces du début et de fin  
         return $data;
     }
+
+    static function checkPostParam(&$param)
+    {
+        if (
+            count($param) == 6 &&
+            isset($param['addNom']) && !empty($param['addNom'])
+            && isset($param['addPrenom']) && !empty($param['addPrenom'])
+            && isset($param['addEmail']) && !empty($param['addEmail'])
+            && isset($param['addMdp']) && !empty($param['addMdp'])
+            && isset($param['addType']) && !empty($param['addType'])
+            && isset($param['addActif']) && !empty($param['addActif'])
+        ) {
+            foreach ($param as $key => $value) {
+                $param[$key] = self::secureForm($value);
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

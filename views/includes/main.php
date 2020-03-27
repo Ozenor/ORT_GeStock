@@ -5,7 +5,21 @@
 
         require_once("sideMenu.php");
         if ($connected) {
-            require_once("listedesproduits.php");
+            switch ($page) {
+                case 'addUser':
+                    require_once("addUser.php");
+                    break;
+                case 'listUsers':
+                    if (!isset($resultGetUsers) || empty($resultGetUsers)) {
+                        $resultGetUsers = Controllers::getUsers();
+                    }
+                    require_once("listeUsers.php");
+                    break;
+
+                default:
+                    require_once("listedesproduits.php");
+                    break;
+            }
         } else {
             require_once("mainConnexion.php");
         }

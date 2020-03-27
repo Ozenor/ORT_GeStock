@@ -37,9 +37,9 @@ class Controllers
 
     public static function secure($value)
     {
-        $value = Trim($value); // Enleve les espaces du début et de fin
         $value = htmlspecialchars($value); // Traduit les entités HTML dans une chaine de caractères
         $value = strip_tags($value); // Supprime les balises HTML et PHP d'une chaine de caractère
+        $value = Trim($value); // Enleve les espaces du début et de fin
         return $value;
     }
 
@@ -69,6 +69,24 @@ class Controllers
         return json_decode(Controllers::getCurlRest("?ctrl=getProducts"));
     }
 
+    /**
+     * Sert a traiter l'ajout des users
+     * @param int $datas => les datas
+     * @return object => result
+     */
+    static function addUser($user)
+    {
+        $param = array(
+            "typeSend" => "POST",
+            "ctrl" => "postAddUser",
+            "datas" => $user,
+        );
+        $postResult = json_decode(Controllers::postCurlRest($param));
+        // var_dump($user);
+        // var_dump($postResult);
+        // return json_decode(Controllers::postCurlRest("?ctrl=postAddUser"));
+
+    }
     /**
      * Call curl on API in REST
      * @param int $param => params for call api

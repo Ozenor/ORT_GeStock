@@ -40,16 +40,14 @@
       <a class="navbar-brand" href="index.php"><i class="fas fa-home"></i>
         <img src="/component/img/logo.png" width="45%" class="d-inline-block align-top" alt="logo">
       </a>
-      <span class="text-white"><?php echo Controllers::writingHello("Moi") ?></span>
+      <span class="text-white">
+        <?php
+        if ($connected == true) {
+          echo Controllers::writingHello($_SESSION["prenomUser"] . " " . $_SESSION["nomUser"]);
+        } else {
+          echo Controllers::writingHello("invité");
+        }
+        ?>
+      </span>
     </nav>
   </header>
-
-
-  <!--- fin header --->
-
-
-  <!---   footer -->
-
-  <!---  fin footer-->
-
-</body>

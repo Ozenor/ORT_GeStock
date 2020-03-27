@@ -4,9 +4,6 @@
       <a href="#"><i class="fab fa-facebook-f"></i></a>&nbsp&nbsp<a href="#"><i class="fab fa-twitter"></i></a>&nbsp&nbsp<a href="#"><i class="fab fa-youtube"></i></a>&nbsp&nbsp<a href="#"><i class="fab fa-instagram"></i></a>
     </div>
 
-    <!-- <div class="spinner-border" role="status">
-  <span class="sr-only">Loading...</span>
-</div> -->
 
     <div class="col-md-9-offset-1 text-center btw">
       <a href="#" class="bbw" style="text-decoration: none; color: white;">Nous contacter&nbsp&nbsp|</a><a href="#" class="bbw" style="text-decoration: none; color: white;">&nbsp&nbspMentions legales&nbsp&nbsp|</a><a href="#" class="bbw" style="text-decoration: none; color: white;">&nbsp&nbspConditions generales </a>
@@ -23,6 +20,11 @@
 
   </div>
 
+  <script>
+    $(document).ready(function() {
+      $('#example').DataTable();
+    });
+  </script>
   </body>
 
   </html>
