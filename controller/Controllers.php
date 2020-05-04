@@ -81,7 +81,7 @@ class Controllers
             "ctrl" => "postAddUser",
             "datas" => $user,
         );
-        $postResult = json_decode(Controllers::postCurlRest($param));
+        return $postResult = json_decode(Controllers::postCurlRest($param));
         // var_dump($user);
         // var_dump($postResult);
         // return json_decode(Controllers::postCurlRest("?ctrl=postAddUser"));
