@@ -17,6 +17,9 @@
                     break;
 
                 default:
+                    if (!isset($resultGetProducts) || empty($resultGetProducts)) {
+                        $resultGetProducts = Controllers::getProducts();
+                    }
                     require_once("listedesproduits.php");
                     break;
             }
