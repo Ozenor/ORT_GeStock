@@ -87,6 +87,44 @@ class Controllers
         // return json_decode(Controllers::postCurlRest("?ctrl=postAddUser"));
 
     }
+
+    /**
+     * Sert a traiter la suppression d'un produit
+     * @param int $datas => les datas
+     * @return object => result
+     */
+    static function deleteProduct($id)
+    {
+        $param = array(
+            "typeSend" => "PUT",
+            "ctrl" => "putDisableProduct",
+            "datas" => $id,
+        );
+        return $postResult = json_decode(Controllers::putCurlRest($param));
+        // var_dump($user);
+        // var_dump($postResult);
+        // return json_decode(Controllers::postCurlRest("?ctrl=postAddUser"));
+
+    }
+
+    /**
+     * Sert a traiter la suppression d'un user
+     * @param int $datas => les datas
+     * @return object => result
+     */
+    static function deleteUser($id)
+    {
+        $param = array(
+            "typeSend" => "PUT",
+            "ctrl" => "putDisableUser",
+            "datas" => $id,
+        );
+        return $postResult = json_decode(Controllers::putCurlRest($param));
+        // var_dump($user);
+        // var_dump($postResult);
+        // return json_decode(Controllers::postCurlRest("?ctrl=postAddUser"));
+
+    }
     /**
      * Call curl on API in REST
      * @param int $param => params for call api

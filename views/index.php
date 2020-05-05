@@ -35,7 +35,7 @@ if (
     } elseif ($resultGetUsers->status == "success") {
         foreach ($resultGetUsers->result as $value) {
             //var_dump($value->email);
-            if ($value->email == $_SESSION['email'] && $value->mot_de_passe == $_SESSION['mdp']) {
+            if ($value->email == $_SESSION['email'] &&  hash('sha512', $_SESSION['mdp']) == $value->mot_de_passe) {
                 foreach ($value as $key => $val) {
                     // echo $key . 'User';
                     $_SESSION[$key . 'User'] = $val;
@@ -90,6 +90,42 @@ if (
             } else {
                 $echecConnexion = "Erreur dans les parametres de l'ajout utilisateur";
                 $arrayVar['page'] = "addUser";
+                break;
+            }
+            $resultGetUsers = Controllers::getUsers();
+            break;
+
+        case "deleteProduct":
+            if (
+                isset($_SESSION['id']) && !empty($_SESSION['id'])
+            ) {
+                $resultDeleteProduct = Controllers::deleteProduct(array('id' => $_SESSION['id']));
+
+                if ($resultDeleteProduct->status == "failed") {
+                    die($resultDeleteProduct->result);
+                }
+                $arrayVar['page'] = "listedesproduits";
+            } else {
+                $echecConnexion = "Erreur de suppression de produits";
+                $arrayVar['page'] = "listedesproduits";
+                break;
+            }
+            $resultGetUsers = Controllers::getUsers();
+            break;
+
+        case "deleteUser":
+            if (
+                isset($_SESSION['id']) && !empty($_SESSION['id'])
+            ) {
+                $resultDeleteUser = Controllers::deleteUser(array('id' => $_SESSION['id']));
+
+                if ($resultDeleteUser->status == "failed") {
+                    die($resultDeleteUser->result);
+                }
+                $arrayVar['page'] = "listUsers";
+            } else {
+                $echecConnexion = "Erreur de suppression d'utilisateur'";
+                $arrayVar['page'] = "listUsers";
                 break;
             }
             $resultGetUsers = Controllers::getUsers();

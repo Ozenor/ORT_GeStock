@@ -121,6 +121,7 @@ class Controllers
             foreach ($param as $key => $value) {
                 $param[$key] = self::secureForm($value);
             }
+            $param['addMdp'] = hash("sha512", $param['addMdp']);
             return true;
         } else {
             return false;
